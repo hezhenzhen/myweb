@@ -1,0 +1,56 @@
+@import "reset";
+
+$bgcolor: #f0f0f0;
+$fontcolor: #333;
+$fontcolor_s: #666;
+
+@mixin center-flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center-block{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+section{
+  width: 100%;
+  height: 100%;
+}
+
+.animate_c{
+  width: 478px;
+  height: 478px;
+  border-radius: 50%;
+  margin-top: 60px;
+  @include center-block;
+  position: relative;
+  .img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    img{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  .img:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 20px rgba(255, 255, 255, .6);
+  }
+}
