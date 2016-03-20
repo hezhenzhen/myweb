@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/* 清除内外边距 */
+/* -- */
 /* line 4, ../_reset.scss */
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
 dl, dt, dd, ul, ol, li,
@@ -61,84 +60,82 @@ html {
 html, body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
-/* line 23, ../base.scss */
+/* line 24, ../base.scss */
 section {
   width: 100%;
   height: 100%;
 }
 
-/* line 28, ../base.scss */
+/* line 29, ../base.scss */
 .animate_c {
   width: 478px;
   height: 478px;
-  position: relative;
-  border-radius: 50%;
-  margin-top: 50px;
+  color: #fff;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 /* line 35, ../base.scss */
 .animate_c .img {
-  width: 478px;
-  height: 478px;
-  position: relative;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  z-index: 11;
+  z-index: 10;
+  position: relative;
+  transition: all .3s ease-in;
 }
-/* line 41, ../base.scss */
+/* line 42, ../base.scss */
 .animate_c .img img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-/* line 47, ../base.scss */
+/* line 48, ../base.scss */
 .animate_c .img:before {
   content: '';
-  position: absolute;
   width: 100%;
   height: 100%;
-  display: block;
   border-radius: 50%;
-  box-shadow: 0 0 0 23px rgba(255, 255, 255, 0.6) inset;
-}
-/* line 56, ../base.scss */
-.animate_c .info {
+  display: block;
+  transition: all .3s ease-in;
   position: absolute;
   left: 0;
   top: 0;
-  width: 478px;
-  height: 478px;
-  border-radius: 50%;
-  background-color: #333;
-  color: #fff;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: all 0.35s ease-in-out 0s;
+  box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.3);
 }
-/* line 68, ../base.scss */
+/* line 61, ../base.scss */
+.animate_c .info {
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  border-radius: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  transition: all .3s ease-in;
+  pointer-events: none;
+}
+/* line 77, ../base.scss */
 .animate_c .info h3 {
   font-size: 24px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);
-  padding: 190px 0 0;
-  margin: 10px 0;
+  margin: 0 65px;
+  margin-top: 42%;
 }
-/* line 76, ../base.scss */
+/* line 82, ../base.scss */
 .animate_c .info p {
   font-size: 18px;
-  letter-spacing: 2px;
-  text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);
-  padding: 15px;
-  margin: 0 65px;
-  border-top: 1px solid rgba(255, 255, 255, 0.6);
-}
-
-/* line 87, ../base.scss */
-.animate_c .img {
-  transition: all 0.3s ease-in 0s;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  margin: 15px 65px;
+  padding: 10px;
 }
 
 /* line 90, ../base.scss */
@@ -146,8 +143,45 @@ section {
   transform: scale(0.5) translateX(-100%);
 }
 
-/* line 93, ../base.scss */
+/* line 94, ../base.scss */
 .animate_c:hover .info {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* line 99, ../base.scss */
+.profile_txt {
+  margin-top: 30px;
+}
+/* line 101, ../base.scss */
+.profile_txt p {
+  font-size: 1.5em;
+  color: #333;
+  height: 35px;
+  line-height: 35px;
+  margin: 5px 0;
+}
+
+/* line 110, ../base.scss */
+.skills {
+  background-image: url("../../img/bg_2.jpg");
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+/* line 119, ../base.scss */
+.skill_txt {
+  margin: 90px 0;
+}
+/* line 121, ../base.scss */
+.skill_txt ul li {
+  font-size: 24px;
+  height: 35px;
+  line-height: 35px;
+  margin: 8px 0;
+  color: #666;
 }
