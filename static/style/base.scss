@@ -3,6 +3,7 @@
 $bgcolor: #f0f0f0;
 $fontcolor: #333;
 $fontcolor_s: #666;
+$hcolor: #ff6666;
 
 @mixin center-flex{
   display: flex;
@@ -13,6 +14,11 @@ $fontcolor_s: #666;
 @mixin center-block{
   margin-left: auto;
   margin-right: auto;
+}
+
+@mixin  align-center{
+  display: flex;
+  align-items: center;
 }
 
 html, body{
@@ -26,6 +32,9 @@ section{
   height: 100%;
 }
 
+.profile, .skills{
+  @include align-center;
+}
 .animate_c{
   width:478px;
   height: 478px;
@@ -113,8 +122,6 @@ section{
   background-attachment: scroll;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
 }
 .skill_txt{
   margin: 90px 0;
@@ -125,4 +132,115 @@ section{
     margin: 8px 0;
     color: $fontcolor_s;
   }
+}
+
+.works{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  .container{
+    height: 100%;
+  }
+}
+
+.work_box{
+  width: 100%;
+  height: 90%;
+  position: relative;
+  margin: 5% 0;
+  border: 1px solid #ff000;
+  .work_line{
+    height: 50%;
+    @include align-center;
+  }
+}
+.work_box:before{
+  content: '';
+  width: 4px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -2px;
+  top: 0;
+  background-color: #ccc;
+}
+.work{
+  padding: 20px 35px;
+  width: 50%;
+  h2{
+    margin: 5px 0;
+    img{
+      height: 45px;
+    }
+  }
+  h3{
+    font-size: 24px;
+    color: $hcolor;
+    height: 50px;
+    line-height: 50px;
+  }
+  ul{
+    padding: 30px;
+    li{
+      color: $fontcolor_s;
+      height: 35px;
+      line-height: 35px;
+      font-size: 18px;
+    }
+    dt, dd{
+      height: 35px;
+      line-height: 35px;
+    }
+    dd{
+      text-indent: 2em;
+    }
+  }
+}
+.work_f{
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+}
+.work_l{
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+}
+.work_f:before{
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: #66cccc;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: -10px;
+}
+.work_l:before{
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: #66cccc;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: -10px;
+}
+.work_line:last-child .work:after{
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: #66cccc;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  left: -10px;
+}
+.projects{
+  background-color: $bgcolor;
 }
