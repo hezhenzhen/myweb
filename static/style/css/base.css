@@ -56,26 +56,27 @@ html {
   overflow-y: scroll;
 }
 
-/* line 24, ../base.scss */
+/* line 28, ../base.scss */
 html, body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
 }
 
-/* line 30, ../base.scss */
+/* line 34, ../base.scss */
 section {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
-/* line 35, ../base.scss */
+/* line 40, ../base.scss */
 .profile, .skills {
   display: flex;
   align-items: center;
 }
 
-/* line 38, ../base.scss */
+/* line 43, ../base.scss */
 .animate_c {
   width: 478px;
   height: 478px;
@@ -84,7 +85,7 @@ section {
   margin-right: auto;
   position: relative;
 }
-/* line 44, ../base.scss */
+/* line 49, ../base.scss */
 .animate_c .img {
   width: 100%;
   height: 100%;
@@ -93,13 +94,13 @@ section {
   position: relative;
   transition: all .3s ease-in;
 }
-/* line 51, ../base.scss */
+/* line 56, ../base.scss */
 .animate_c .img img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-/* line 57, ../base.scss */
+/* line 62, ../base.scss */
 .animate_c .img:before {
   content: '';
   width: 100%;
@@ -112,7 +113,7 @@ section {
   top: 0;
   box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.3);
 }
-/* line 70, ../base.scss */
+/* line 75, ../base.scss */
 .animate_c .info {
   width: 100%;
   height: 100%;
@@ -130,13 +131,13 @@ section {
   transition: all .3s ease-in;
   pointer-events: none;
 }
-/* line 86, ../base.scss */
+/* line 91, ../base.scss */
 .animate_c .info h3 {
   font-size: 24px;
   margin: 0 65px;
   margin-top: 42%;
 }
-/* line 91, ../base.scss */
+/* line 96, ../base.scss */
 .animate_c .info p {
   font-size: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.8);
@@ -144,31 +145,29 @@ section {
   padding: 10px;
 }
 
-/* line 99, ../base.scss */
+/* line 104, ../base.scss */
 .animate_c:hover .img {
   transform: scale(0.5) translateX(-100%);
 }
 
-/* line 103, ../base.scss */
+/* line 108, ../base.scss */
 .animate_c:hover .info {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* line 108, ../base.scss */
+/* line 113, ../base.scss */
 .profile_txt {
   margin-top: 30px;
 }
-/* line 110, ../base.scss */
+/* line 115, ../base.scss */
 .profile_txt p {
   font-size: 1.5em;
   color: #333;
-  height: 35px;
-  line-height: 35px;
   margin: 5px 0;
 }
 
-/* line 119, ../base.scss */
+/* line 122, ../base.scss */
 .skills {
   background-image: url("../../img/bg_2.jpg");
   background-position: center center;
@@ -177,11 +176,11 @@ section {
   background-repeat: no-repeat;
 }
 
-/* line 126, ../base.scss */
+/* line 129, ../base.scss */
 .skill_txt {
   margin: 90px 0;
 }
-/* line 128, ../base.scss */
+/* line 131, ../base.scss */
 .skill_txt ul li {
   font-size: 24px;
   height: 35px;
@@ -190,19 +189,19 @@ section {
   color: #666;
 }
 
-/* line 137, ../base.scss */
+/* line 140, ../base.scss */
 .works {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-/* line 142, ../base.scss */
+/* line 145, ../base.scss */
 .works .container {
   height: 100%;
 }
 
-/* line 147, ../base.scss */
+/* line 150, ../base.scss */
 .work_box {
   width: 100%;
   height: 90%;
@@ -210,14 +209,14 @@ section {
   margin: 5% 0;
   border: 1px solid #ff000;
 }
-/* line 153, ../base.scss */
+/* line 156, ../base.scss */
 .work_box .work_line {
   height: 50%;
   display: flex;
   align-items: center;
 }
 
-/* line 158, ../base.scss */
+/* line 161, ../base.scss */
 .work_box:before {
   content: '';
   width: 4px;
@@ -230,62 +229,55 @@ section {
   background-color: #ccc;
 }
 
-/* line 169, ../base.scss */
+/* line 172, ../base.scss */
 .work {
   padding: 20px 35px;
   width: 50%;
 }
-/* line 172, ../base.scss */
+/* line 175, ../base.scss */
 .work h2 {
   margin: 5px 0;
 }
-/* line 174, ../base.scss */
+/* line 177, ../base.scss */
 .work h2 img {
   height: 45px;
 }
-/* line 178, ../base.scss */
+/* line 181, ../base.scss */
 .work h3 {
-  font-size: 24px;
+  font-size: 1.5em;
   color: #ff6666;
   height: 50px;
   line-height: 50px;
 }
-/* line 184, ../base.scss */
+/* line 187, ../base.scss */
 .work ul {
   padding: 30px;
 }
-/* line 186, ../base.scss */
+/* line 189, ../base.scss */
 .work ul li {
   color: #666;
-  height: 35px;
-  line-height: 35px;
   font-size: 18px;
 }
-/* line 192, ../base.scss */
-.work ul dt, .work ul dd {
-  height: 35px;
-  line-height: 35px;
-}
-/* line 196, ../base.scss */
+/* line 195, ../base.scss */
 .work ul dd {
   text-indent: 2em;
 }
 
-/* line 201, ../base.scss */
+/* line 200, ../base.scss */
 .work_f {
   position: absolute;
   left: 50%;
   bottom: 30px;
 }
 
-/* line 206, ../base.scss */
+/* line 205, ../base.scss */
 .work_l {
   position: absolute;
   left: 0;
   bottom: 30px;
 }
 
-/* line 211, ../base.scss */
+/* line 210, ../base.scss */
 .work_f:before {
   content: '';
   width: 20px;
@@ -296,6 +288,7 @@ section {
   position: absolute;
   top: 10px;
   left: -10px;
+  text-indent: 1.5em;
 }
 
 /* line 222, ../base.scss */
@@ -309,9 +302,10 @@ section {
   position: absolute;
   top: 10px;
   right: -10px;
+  text-indent: 1.5em;
 }
 
-/* line 233, ../base.scss */
+/* line 234, ../base.scss */
 .work_line:last-child .work:after {
   content: '';
   width: 20px;
@@ -322,9 +316,55 @@ section {
   position: absolute;
   bottom: 10px;
   left: -10px;
+  text-indent: 1.5em;
 }
 
-/* line 244, ../base.scss */
+/* line 247, ../base.scss */
 .projects {
   background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+}
+/* line 250, ../base.scss */
+.projects .project {
+  border-top: 2px solid #fff;
+  padding: 25px 0;
+}
+/* line 254, ../base.scss */
+.projects .project:first-child {
+  border-top: none;
+}
+
+/* line 259, ../base.scss */
+.project_txt {
+  padding: 20px;
+}
+/* line 261, ../base.scss */
+.project_txt h3 {
+  margin-bottom: 25px;
+  color: #333;
+}
+/* line 265, ../base.scss */
+.project_txt span {
+  padding: 6px 12px;
+  margin: 5px 0;
+}
+/* line 269, ../base.scss */
+.project_txt p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #666;
+  line-height: 25px;
+}
+
+/* line 277, ../base.scss */
+.project_img {
+  width: 100%;
+  height: 100%;
+}
+/* line 280, ../base.scss */
+.project_img img {
+  border: 18px solid #fff;
+  border-radius: 5px;
+  width: 90%;
 }

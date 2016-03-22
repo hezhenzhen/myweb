@@ -4,6 +4,10 @@ $bgcolor: #f0f0f0;
 $fontcolor: #333;
 $fontcolor_s: #666;
 $hcolor: #ff6666;
+$orangecolor: #ff6600;
+$bluecolor: #66cccc;
+$greencolor: #80bd00;
+$yellowcolor: #e2f601;
 
 @mixin center-flex{
   display: flex;
@@ -30,6 +34,7 @@ html, body{
 section{
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .profile, .skills{
@@ -110,8 +115,6 @@ section{
   p{
     font-size: 1.5em;
     color: $fontcolor;
-    height: 35px;
-    line-height: 35px;
     margin: 5px 0;
   }
 }
@@ -176,7 +179,7 @@ section{
     }
   }
   h3{
-    font-size: 24px;
+    font-size: 1.5em;
     color: $hcolor;
     height: 50px;
     line-height: 50px;
@@ -185,13 +188,9 @@ section{
     padding: 30px;
     li{
       color: $fontcolor_s;
-      height: 35px;
-      line-height: 35px;
       font-size: 18px;
     }
     dt, dd{
-      height: 35px;
-      line-height: 35px;
     }
     dd{
       text-indent: 2em;
@@ -218,6 +217,7 @@ section{
   position: absolute;
   top: 10px;
   left: -10px;
+  text-indent: 1.5em;
 }
 .work_l:before{
   content: '';
@@ -229,6 +229,7 @@ section{
   position: absolute;
   top: 10px;
   right: -10px;
+  text-indent: 1.5em;
 }
 .work_line:last-child .work:after{
   content: '';
@@ -240,7 +241,45 @@ section{
   position: absolute;
   bottom: 10px;
   left: -10px;
+  text-indent: 1.5em;
 }
+
 .projects{
   background-color: $bgcolor;
+  @include align-center;
+  .project{
+    border-top: 2px solid #fff;
+    padding: 25px 0;
+  }
+  .project:first-child{
+    border-top: none;
+  }
+}
+
+.project_txt{
+  padding: 20px;
+  h3{
+    margin-bottom: 25px;
+    color: $fontcolor;
+  }
+  span{
+    padding: 6px 12px;
+    margin: 5px 0;
+  }
+  p{
+    margin-top: 20px;
+    font-size: 18px;
+    color: $fontcolor_s;
+    line-height: 25px;
+  }
+}
+
+.project_img{
+  width: 100%;
+  height: 100%;
+  img{
+    border: 18px solid #fff;
+    border-radius: 5px;
+    width: 90%;
+  }
 }
