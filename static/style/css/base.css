@@ -51,16 +51,11 @@ hr {
   height: 1px;
 }
 
-/* line 40, ../_reset.scss */
-html {
-  overflow-y: scroll;
-}
-
 /* line 28, ../base.scss */
 html, body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  padding-top: 70px;
 }
 
 /* line 34, ../base.scss */
@@ -70,13 +65,29 @@ section {
   overflow: hidden;
 }
 
-/* line 40, ../base.scss */
-.profile, .skills {
+/* line 39, ../base.scss */
+.qq_icon {
+  background-image: url("../../img/qq.jpg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 35px;
+}
+
+/* line 45, ../base.scss */
+.wechat_icon {
+  background-image: url("../../img/wechat.jpg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 35px;
+}
+
+/* line 51, ../base.scss */
+.profile, .skills, .projects {
   display: flex;
   align-items: center;
 }
 
-/* line 43, ../base.scss */
+/* line 55, ../base.scss */
 .animate_c {
   width: 478px;
   height: 478px;
@@ -85,7 +96,7 @@ section {
   margin-right: auto;
   position: relative;
 }
-/* line 49, ../base.scss */
+/* line 61, ../base.scss */
 .animate_c .img {
   width: 100%;
   height: 100%;
@@ -94,13 +105,13 @@ section {
   position: relative;
   transition: all .3s ease-in;
 }
-/* line 56, ../base.scss */
+/* line 68, ../base.scss */
 .animate_c .img img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-/* line 62, ../base.scss */
+/* line 74, ../base.scss */
 .animate_c .img:before {
   content: '';
   width: 100%;
@@ -113,7 +124,7 @@ section {
   top: 0;
   box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.3);
 }
-/* line 75, ../base.scss */
+/* line 87, ../base.scss */
 .animate_c .info {
   width: 100%;
   height: 100%;
@@ -131,13 +142,13 @@ section {
   transition: all .3s ease-in;
   pointer-events: none;
 }
-/* line 91, ../base.scss */
+/* line 103, ../base.scss */
 .animate_c .info h3 {
   font-size: 24px;
   margin: 0 65px;
   margin-top: 42%;
 }
-/* line 96, ../base.scss */
+/* line 108, ../base.scss */
 .animate_c .info p {
   font-size: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.8);
@@ -145,29 +156,29 @@ section {
   padding: 10px;
 }
 
-/* line 104, ../base.scss */
+/* line 117, ../base.scss */
 .animate_c:hover .img {
   transform: scale(0.5) translateX(-100%);
 }
 
-/* line 108, ../base.scss */
+/* line 121, ../base.scss */
 .animate_c:hover .info {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* line 113, ../base.scss */
+/* line 126, ../base.scss */
 .profile_txt {
   margin-top: 30px;
 }
-/* line 115, ../base.scss */
+/* line 128, ../base.scss */
 .profile_txt p {
   font-size: 1.5em;
   color: #333;
   margin: 5px 0;
 }
 
-/* line 122, ../base.scss */
+/* line 135, ../base.scss */
 .skills {
   background-image: url("../../img/bg_2.jpg");
   background-position: center center;
@@ -176,11 +187,11 @@ section {
   background-repeat: no-repeat;
 }
 
-/* line 129, ../base.scss */
+/* line 142, ../base.scss */
 .skill_txt {
   margin: 90px 0;
 }
-/* line 131, ../base.scss */
+/* line 144, ../base.scss */
 .skill_txt ul li {
   font-size: 24px;
   height: 35px;
@@ -189,34 +200,33 @@ section {
   color: #666;
 }
 
-/* line 140, ../base.scss */
+/* line 153, ../base.scss */
 .works {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-/* line 145, ../base.scss */
+/* line 158, ../base.scss */
 .works .container {
   height: 100%;
 }
 
-/* line 150, ../base.scss */
+/* line 163, ../base.scss */
 .work_box {
   width: 100%;
   height: 90%;
   position: relative;
   margin: 5% 0;
-  border: 1px solid #ff0000;
 }
-/* line 156, ../base.scss */
+/* line 168, ../base.scss */
 .work_box .work_line {
   height: 50%;
   display: flex;
   align-items: center;
 }
 
-/* line 161, ../base.scss */
+/* line 173, ../base.scss */
 .work_box:before {
   content: '';
   width: 4px;
@@ -229,55 +239,55 @@ section {
   background-color: #ccc;
 }
 
-/* line 172, ../base.scss */
+/* line 184, ../base.scss */
 .work {
   padding: 20px 35px;
   width: 50%;
 }
-/* line 175, ../base.scss */
+/* line 187, ../base.scss */
 .work h2 {
   margin: 5px 0;
 }
-/* line 177, ../base.scss */
+/* line 189, ../base.scss */
 .work h2 img {
   height: 45px;
 }
-/* line 181, ../base.scss */
+/* line 193, ../base.scss */
 .work h3 {
   font-size: 1.5em;
   color: #ff6666;
   height: 50px;
   line-height: 50px;
 }
-/* line 187, ../base.scss */
+/* line 199, ../base.scss */
 .work ul {
   padding: 30px;
 }
-/* line 189, ../base.scss */
+/* line 201, ../base.scss */
 .work ul li {
   color: #666;
   font-size: 18px;
 }
-/* line 195, ../base.scss */
+/* line 207, ../base.scss */
 .work ul dd {
   text-indent: 2em;
 }
 
-/* line 200, ../base.scss */
+/* line 212, ../base.scss */
 .work_f {
   position: absolute;
   left: 50%;
   bottom: 30px;
 }
 
-/* line 205, ../base.scss */
+/* line 217, ../base.scss */
 .work_l {
   position: absolute;
   left: 0;
   bottom: 30px;
 }
 
-/* line 210, ../base.scss */
+/* line 222, ../base.scss */
 .work_f:before {
   content: '';
   width: 20px;
@@ -291,7 +301,7 @@ section {
   text-indent: 1.5em;
 }
 
-/* line 222, ../base.scss */
+/* line 234, ../base.scss */
 .work_l:before {
   content: '';
   width: 20px;
@@ -305,7 +315,7 @@ section {
   text-indent: 1.5em;
 }
 
-/* line 234, ../base.scss */
+/* line 246, ../base.scss */
 .work_line:last-child .work:after {
   content: '';
   width: 20px;
@@ -319,37 +329,35 @@ section {
   text-indent: 1.5em;
 }
 
-/* line 247, ../base.scss */
+/* line 259, ../base.scss */
 .projects {
   background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
 }
-/* line 250, ../base.scss */
+/* line 261, ../base.scss */
 .projects .project {
   border-top: 2px solid #fff;
   padding: 25px 0;
 }
-/* line 254, ../base.scss */
+/* line 265, ../base.scss */
 .projects .project:first-child {
   border-top: none;
 }
 
-/* line 259, ../base.scss */
+/* line 270, ../base.scss */
 .project_txt {
   padding: 20px;
 }
-/* line 261, ../base.scss */
+/* line 272, ../base.scss */
 .project_txt h3 {
   margin-bottom: 25px;
   color: #333;
 }
-/* line 265, ../base.scss */
+/* line 276, ../base.scss */
 .project_txt span {
   padding: 6px 12px;
   margin: 5px 0;
 }
-/* line 269, ../base.scss */
+/* line 280, ../base.scss */
 .project_txt p {
   margin-top: 20px;
   font-size: 18px;
@@ -357,12 +365,12 @@ section {
   line-height: 25px;
 }
 
-/* line 277, ../base.scss */
+/* line 288, ../base.scss */
 .project_img {
   width: 100%;
   height: 100%;
 }
-/* line 280, ../base.scss */
+/* line 291, ../base.scss */
 .project_img img {
   border: 18px solid #fff;
   border-radius: 5px;
@@ -370,54 +378,72 @@ section {
 }
 
 /*-----------------------------------------------*/
-/* line 289, ../base.scss */
+/* line 300, ../base.scss */
 .active .animate_c {
   animation: moveDown 1s ease-in-out;
 }
-/* line 292, ../base.scss */
+/* line 303, ../base.scss */
 .active .profile_txt {
   animation: moveUp 1s ease-in-out 1s backwards;
 }
 
-/* line 299, ../base.scss */
+/* line 310, ../base.scss */
 .active .skill_txt li:nth-child(1) {
   animation: moveRight .5s ease-in 0s;
 }
-/* line 302, ../base.scss */
+/* line 313, ../base.scss */
 .active .skill_txt li:nth-child(2) {
   animation: moveRight .5s ease-in .1s backwards;
 }
-/* line 305, ../base.scss */
+/* line 316, ../base.scss */
 .active .skill_txt li:nth-child(3) {
   animation: moveRight .5s ease-in .2s backwards;
 }
-/* line 308, ../base.scss */
+/* line 319, ../base.scss */
 .active .skill_txt li:nth-child(4) {
   animation: moveRight .5s ease-in .3s backwards;
 }
-/* line 311, ../base.scss */
+/* line 322, ../base.scss */
 .active .skill_txt li:nth-child(5) {
   animation: moveRight .5s ease-in .4s backwards;
 }
-/* line 314, ../base.scss */
+/* line 325, ../base.scss */
 .active .skill_txt li:nth-child(6) {
   animation: moveRight .5s ease-in .5s backwards;
 }
-/* line 317, ../base.scss */
+/* line 328, ../base.scss */
 .active .skill_txt li:nth-child(7) {
   animation: moveRight .5s ease-in .6s backwards;
 }
-/* line 320, ../base.scss */
+/* line 331, ../base.scss */
 .active .skill_txt li:nth-child(8) {
   animation: moveRight .5s ease-in .7s backwards;
 }
-/* line 323, ../base.scss */
+/* line 334, ../base.scss */
 .active .skill_txt li:nth-child(9) {
   animation: moveRight .5s ease-in .8s backwards;
 }
-/* line 326, ../base.scss */
+/* line 337, ../base.scss */
 .active .skill_txt li:nth-child(10) {
   animation: moveRight .5s ease-in .9s backwards;
+}
+
+/* line 345, ../base.scss */
+.active .work_l {
+  animation: moveRight 1s ease-in 1s backwards;
+}
+/* line 348, ../base.scss */
+.active .work_f {
+  animation: moveLeft 1s ease-in 0s;
+}
+
+/* line 354, ../base.scss */
+.active .project:nth-child(1) {
+  animation: moveDown 1s ease-in-out;
+}
+/* line 357, ../base.scss */
+.active .project:nth-child(2) {
+  animation: moveUp 1s ease-in-out 1s backwards;
 }
 
 @keyframes moveDown {
@@ -443,6 +469,14 @@ section {
 @keyframes moveRight {
   from {
     transform: translateX(-300%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes moveLeft {
+  from {
+    transform: translateX(300%);
   }
   to {
     transform: translateX(0);
